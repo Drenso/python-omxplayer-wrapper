@@ -18,7 +18,7 @@ from omxplayer.dbus_connection import DBusConnection, \
 from evento import Event
 
 #### CONSTANTS ####
-RETRY_DELAY = 0.05
+RETRY_DELAY = 0.02
 
 
 #### FILE GLOBAL OBJECTS ####
@@ -113,7 +113,7 @@ class OMXPlayer(object):
 
     def _setup_dbus_connection(self, Connection, bus_address_finder):
         logger.debug('Trying to connect to OMXPlayer via DBus')
-        while self.tries < 50:
+        while self.tries < 10:
             logger.debug('DBus connect attempt: {}'.format(self.tries))
             try:
                 connection = Connection(bus_address_finder.get_address())
