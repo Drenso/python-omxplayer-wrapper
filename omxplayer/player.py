@@ -18,7 +18,7 @@ from omxplayer.dbus_connection import DBusConnection, \
 from evento import Event
 
 #### CONSTANTS ####
-RETRY_DELAY = 0.02
+RETRY_DELAY = 0.05
 
 
 #### FILE GLOBAL OBJECTS ####
